@@ -1,0 +1,109 @@
+A revision of vuex:
+
+1)Creating and using a store:
+import {createStore} from 'vuex'
+
+const store=createStore(
+{
+state(){
+return{}
+},
+mutations:{},
+getters:{},
+actions:{},
+})
+
+2)connecting components to state:
+//this is the gateway to mutate/change our global state
+mutations:
+{
+  mutation_name(state,payload)
+{ //always give current state
+ state.proop=state.prop + payload.value  
+}
+//accessing a mutation
+this.$store.commit({type:'name of mutation',
+payload:'the value you want to use'})
+
+}
+
+3)Accessing the data using getters
+getters:{
+name_of_getter(state,getters)
+{
+    return (some value);
+}
+
+}
+
+//accessing the getter
+this.$store.getters.name_of_getter
+
+4)Actions(here we write the async code of our app)
+it is a good practice to always put actions always in between mutations and components
+
+actions:{
+//same name as corressponding mutation
+name_of_action(context){
+ //context.commit('name of mutaion');
+or 
+some async req=>{}
+.then(context.commit('name of mutation',promise))
+.catch(context.commit('name of mutation',promise))
+or
+ you can use async await
+}
+}
+
+#Mapper helpers
+import {mapGetters} from 'vuex'
+computed:{
+...mapGetters(['name of gettes','which you','want to include'])
+
+}
+
+import {mapActions} from 'vuex'
+
+methods:{
+...mapActions(['all','the action names','which you want to include'])
+//and can pass payload simpy as arguments()
+}
+
+or
+...mapActions([{key:'name of action'}])
+
+#organizing store with modules
+split you store into mutiple modules for specific functionalities
+// now how to merge these modules?
+
+createStore({
+modules:{
+key/indetifier:point to the module you wana merge
+}
+})
+
+#namspacing the module
+
+while initializing a store module
+createStore({
+nameSpace:true,
+modules:{
+key:pointer to the sub store module
+}
+//key of a module is it's namespace
+})
+
+//we need to change syntax when using namespace
+
+1)getters this.$store.getters['nameSpace/name of getter']
+
+2)...mapGetters('namespace',[array of getters])
+
+3)...mapActions('nameSpace',[array of actions])
+
+4)actions this.$store.dispatch({
+type:'nameSpace/name_of_action',
+value:
+})
+
+

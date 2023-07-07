@@ -1,0 +1,63 @@
+CRUD operations (vuefire and vueJs)
+1)integrating the firebase:
+a)get teh JS object from the add firebase to the web app
+firebase.js
+import {initializeApp} from 'firebase'
+const app = initializeApp({
+put the JSON object in here
+})
+
+b) export const db=app.database();
+   export const namesRef= db.ref('names') //will points at this collection
+
+c) add this in main.js
+import ./firebase
+import VueFire from 'vuefire'
+
+Vue.use(VueFire);
+
+d)performing the CRUD operations
+
+//to use a collection first you need to import it
+
+import {namesRef} from './firebase'
+namesRef.push({json object},edit:false)
+
+//for now change read and write to true
+
+//reading data
+firebase:{
+names:namesRef
+}
+
+<div>
+<ul>
+<li v-for="personName of names">
+ :key="personName['.key']"?
+{{personName}}
+</li>
+</ul></div>
+
+//Delete
+removeName(key)
+{
+namesRef.child(key).remove();
+}
+
+//Update
+editName(key)
+{
+namesRef.child(key).update({edit:true});
+//will only update the mentioned keys
+}
+
+*Ordering the data
+db.collection('ref').orderBy('field')
+
+*filtering the data
+db.collection('ref')
+.where(write the query)
+.orderBy('field Name')
+
+
+

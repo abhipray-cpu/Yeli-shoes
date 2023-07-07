@@ -1,0 +1,17 @@
+Time line of the project state
+
+0)Improve the filter options UI
+1)Auth + user features(adding reviews and ratings)
+2)Sorting using the browser side code since complex queries are not so efficient
+3)Need to activate blaze plan and add these extnesions after completion of project
+
+A)Algolia full text search or elastic Search?
+B)Stripe for payments
+C)Google pay extension
+D)Sentiment analysis of reviews
+E)Invoices using Stripe
+F)Ship Engine
+G)Track shipping labels
+H)Purchase shipping labels
+I)Calculate shipping rates
+J)Send messages with Twilio
