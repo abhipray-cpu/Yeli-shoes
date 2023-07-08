@@ -98,18 +98,19 @@ img{
 }
 @media only screen and (max-width:480px){
   ::v-deep .v-application--wrap {
+    height: 240px;
     min-height: fit-content;
-    max-height: 140px;
+    max-height: 240px;
   }
 .v-carousel{
- height: 140px;
+ height: 240px;
   margin-left:0.5%;
   margin-top:10px;
   margin-bottom:0.125%;
 }
 img{
   width:100vw;
-  height:140px;
+  height:240px;
 }
 .desktop{
   display: none;

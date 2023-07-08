@@ -220,31 +220,44 @@ this.hideBg=true;
 @media only screen and (max-width:480px){
   .v-carousel{
     width:200px !important;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .carousel{
     margin-bottom:10px;
-    widht:200px;
+    width:200px;
+    overflow-x: hidden;
   }
   .carouselNormal{
     width:200px;
     height:150px;
+    overflow-x: hidden;
   }
   .carouselHover{
     width:200px;
     height:150px;
+    overflow-x:hidden;
+    margin:0px;
+    padding:0px;
   }
   .containerNormal{
     width:200px;
+    overflow-x:hidden;
+    margin:0px;
+    padding:0px;
   }
   .containerHover{
     width:200px;
+    overflow-x:hidden ;
   }
    #item{
      margin-right:10px;
      margin-top:10px;
      width:200px;
-     overflow-x:hidden ;
+     overflow-x:hidden !important;
+     overflow-y: scroll;
+   }
+   #item::-webkit-scrollbar{
+    display: none;
    }
    #details{
      display:grid;
@@ -253,6 +266,7 @@ this.hideBg=true;
    #info{
      margin-left:2%;
      margin-right:2%;
+     margin-top:12px;
    }
    #info h2{
      text-align:center;

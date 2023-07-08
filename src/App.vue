@@ -82,6 +82,9 @@ export default {
 };
 </script>
 <style>
+*::-webkit-scrollbar{
+display: none;
+}
 #papa{
   overflow-y:auto;
   overflow-x: hidden;
