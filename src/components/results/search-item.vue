@@ -47,7 +47,7 @@
          </v-icon>
         </div>
          <div>
-          <v-icon @click="saveEventListener"  style="right:0" :style="{color:cartColor}">
+          <v-icon @click="saveEventListener"  style="right:0" :style="{color:cartColor}" id="right">
           {{ saveState }}
         </v-icon>
         </div>
@@ -187,20 +187,20 @@ this.hideBg=true;
       margin-bottom:10px;
   }
   .carouselNormal{
-    width:300px;
+    width:20vw;
     height:350px;
     background: transparent !important;
   }
   .carouselHover{
-    width:350px;
+    width:23vw;
     height:400px;
     background: transparent !important;
   }
   .containerNormal{
-    width:300px;
+    width:20vw;
   }
   .containerHover{
-    width:350px;
+    width:23vw;
   }
    #item{
      margin-right:50px;
@@ -234,32 +234,36 @@ this.hideBg=true;
     display:none
   }
 #mobile{
-  width:27vw;
+  width:38vw;
   margin-left:0.5vw;
   margin-right:0.5vw;
   margin-top:5px;
   margin-bottom:5px;
 }
 img{
-  width:27vw;
-  height: 100px;
+  width:38vw;
+  height: 150px;
 }
 #details{
-  width:27vw;
+  width:38vw;
 }
 #details p{
 display: none;
 }
 #details h2{
   font-size:18px;
+  text-align: center;
 }
 #actions{
   display: grid;
-  grid-template-columns: repeat(2,10vw);
-  width:28vw;
-  padding-left:4vw;
-  padding-right:4vw;
+  grid-template-columns: repeat(2,19vw);
+  width:38vw;
+  padding-left:2vw;
   margin-bottom:10px;
+}
+#right{
+  float:right;
+  margin-right:3vw;
 }
 }
 </style>

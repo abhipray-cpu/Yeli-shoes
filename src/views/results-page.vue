@@ -4,21 +4,7 @@
      <the-filter></the-filter>
    </div>
    <div id="col2">
-<v-expansion-panels popout class="sort">
-    <v-expansion-panel>
-      <v-expansion-panel-header>
-        Sort By
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        <ul style="list-style-type: none">
-          <li>Avg Customer rating</li>
-          <li>Newest</li>
-          <li>Price:Low to high</li>
-          <li>Price:High to low</li>
-        </ul>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-  </v-expansion-panels>    <!--later add a global state listenere in here for controlling the bottom sheet-->
+   <!--later add a global state listenere in here for controlling the bottom sheet-->
 
   <the-container v-if="loading"></the-container>
   <skeleton-loader v-else></skeleton-loader>
@@ -77,8 +63,8 @@ activate:false,
 <style scoped>
 @media only screen and (min-width:900px){
   #container-res{
-    display:grid;
-    grid-template-columns:410px auto;
+    display:flex;
+    flex-direction:row;
     position:static;
     width:100vw;
     overflow-x:hidden;
@@ -126,9 +112,13 @@ activate:false,
   ul li:hover{
     color:rgb(148, 148, 148);
   }
+  #col1{
+    width:fit-content;
+  }
   #col2{
     width:fit-content;
     overflow-x:scroll;
+    margin-right:2vw;
   }
   #col2::-webkit-scrollbar{
     display:none;
@@ -136,8 +126,8 @@ activate:false,
 }
 @media only screen and (max-width:480px){
   #container-res{
-    display:grid;
-    grid-template-columns:40vw 60vw;
+    display:flex;
+    flex-direction: row;
     position:static;
     width:100vw;
     overflow-x:hidden;
@@ -186,9 +176,13 @@ activate:false,
   ul li:hover{
     color:rgb(148, 148, 148);
   }
+  #col1{
+    width:fit-content;
+  }
   #col2{
     width:fit-content;
     overflow-x:scroll;
+    margin-right:2vw;
   }
   #col2::-webkit-scrollbar{
     display:none;

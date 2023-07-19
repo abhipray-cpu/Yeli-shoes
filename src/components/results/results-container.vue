@@ -29,8 +29,8 @@ export default {
     padding-left:1.75%;
     padding-right:0.5%;
     display:grid;
-    grid-template-columns: repeat(3,360px);
-    grid-gap:10px;
+    grid-template-columns: repeat(4,23vw);
+    grid-gap:.75vw;
     position:relative;
   }
   #containerF::-webkit-scrollbar{
@@ -42,7 +42,7 @@ export default {
     height:80vh;
     margin-top:55px;
     display:grid;
-    grid-template-columns: repeat(2,28vw);
+    grid-template-columns: repeat(2,40vw);
     position:relative;
     margin-left:2vw;
   }
