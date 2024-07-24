@@ -3,10 +3,7 @@
 <div id="row1">
   <div class="column">
     <h2 class="title">About</h2>
-    <h5 class="about">This is a company and add some thing about this company whateer you want 
-      to add I don't give a fuck frankly speaking no one gives a fuck in the entire world.
-      This is a company and add some thing about this company whateer you want 
-      to add I don't give a fuck frankly speaking no one gives a fuck in the entire world.
+    <h5 class="about">Some random footer text.
     </h5>
   </div>
   <div class="column mob">
